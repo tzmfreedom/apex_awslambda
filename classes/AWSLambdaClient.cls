@@ -24,12 +24,12 @@ public with sharing class AWSLambdaClient extends AWSSigV4Client {
         
         return this.call(
             SERVICE,
-            hostname,
-            signedHeaders,
-            params,
-            resource_path,
+            'POST',
             jsonBody,
-            'POST'
+            hostname,
+            resource_path,
+            signedHeaders,
+            params
         );
     }
 }
